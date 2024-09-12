@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamiento de Citas - UNITRÓPICO</title>
+    <link rel="stylesheet" href="/Style/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>UNITRÓPICO</h1>
+            <nav>
+                <ul>
+                    <li><a href="/Templates/Incio.html">Inicio</a></li>
+                    <li><a href="/Templates/Servicios.html">Servicios</a></li>
+                    <li><a href="/Templates/Equipodetrabajo.html">Equipo de Trabajo</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section class="form-section">
+                <h2>Agenda tu cita médica</h2>
+                <p>Regístrate y agenda tu cita con nuestros médicos especialistas.</p>
+                <form id="appointmentForm">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+
+                    <label for="lastname">Apellido</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Ingresa tu apellido" required>
+
+                    <label for="gender">Género</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Selecciona tu género</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="no_binario">No Binario</option>
+                        <option value="otros">Otros</option>
+                    </select>
+
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" required>
+
+                    <label for="institutionalEmail">Correo institucional</label>
+                    <input type="email" id="institutionalEmail" name="institutionalEmail" placeholder="Ingresa tu correo institucional" required>
+
+                    <div class="calendar">
+                        <label for="appointmentDate">Fecha de la cita</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    </div>
+
+                    <div class="time">
+                        <label for="appointmentTime">Hora de la cita</label>
+                        <select id="appointmentTime" name="appointmentTime" required>
+                            <!-- Opciones se llenarán con JavaScript -->
+                        </select>
+                    </div>
+
+                    <button type="submit">Registrarse</button>
+                </form>
+            </section>
+
+            <aside class="schedule-section">
+                <h2>Horarios disponibles de atención</h2>
+                <ul id="availableTimes">
+                </ul>
+            </aside>
+        </main>
+    </div>
+    <script src="/Controller/script.js"></script>
+</body>
+</html>
